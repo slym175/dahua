@@ -1,13 +1,25 @@
 $(function () {
+
+    $.scrollUp({
+        scrollName: 'scrollUp', // Element ID
+        topDistance: '300', // Distance from top before showing element (px)
+        topSpeed: 300, // Speed back to top (ms)
+        animation: 'fade', // Fade, slide, none
+        animationInSpeed: 200, // Animation in speed (ms)
+        animationOutSpeed: 200, // Animation out speed (ms)
+        scrollText: '<i class="fas fa-arrow-up"></i>', // Text for element
+        activeOverlay: false, // Set CSS color to display scrollUp active point, e.g '#00FFFF'
+    });
+
     $('.home-carousel').owlCarousel({
-        loop:true,
-        margin:10,
+        loop: true,
+        margin: 10,
         items: 1,
-        autoHeight:true,
-        nav:true,
+        autoHeight: true,
+        nav: true,
         dots: false,
-        responsive:{
-            
+        responsive: {
+
         }
     })
 
@@ -17,7 +29,7 @@ $(function () {
         items: 3,
         autoHeight: true,
         nav: true,
-        dots: false,
+        dots: true,
         responsive: {
             0: {
                 items: 1
@@ -30,4 +42,27 @@ $(function () {
             }
         }
     })
+
+    $('.partner-carousel').owlCarousel({
+        loop: true,
+        margin: 27,
+        nav: true,
+        dots: true,
+        responsive: {
+            0: {
+                items: 1
+            },
+            576: {
+                items: 2
+            },
+            992: {
+                items: 4
+            }
+        }
+    })
+
+    $(".stick-header").sticky({
+        topSpacing: 0,
+        zIndex: 1000
+    });
 });
