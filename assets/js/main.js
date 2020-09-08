@@ -65,4 +65,9 @@ $(function () {
         topSpacing: 0,
         zIndex: 1000
     });
+
+    $('.btn-search').click(function(e) {
+        e.preventDefault();
+        $('.search-form').toggleClass('d-none');
+    })
 });
