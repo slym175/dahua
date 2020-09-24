@@ -78,6 +78,10 @@ table {
 	background: #fff;
 }
 
+.main.bg-main {
+	background: #E5E5E5;
+}
+
 [class^="icons-"],
 [class*="icons-"] {
     background-image: url(../img/icons.png);
@@ -155,6 +159,15 @@ table {
 	}
 }
 
+.img-container {
+	overflow: hidden;
+}
+
+.img-container img {
+	max-width: 100%;
+	height: auto;
+}
+
 .section-header {
 	padding-top: 50px;
 	padding-bottom: 25px;
@@ -197,11 +210,32 @@ table {
 }
 
 .page-title {
+	display: inline-block;
 	font: normal 700 42px/49px  Roboto;
 	letter-spacing: 0,03em;
 	text-align: left;
 	text-transform: uppercase;
 	color: #fff;
+	position: relative;
+}
+
+.page-title::before, .page-title::after {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 0;
+    border: 1px solid #fff;
+    transform: rotate(138deg);
+}
+
+.page-title::before {
+    top: 5px;
+    left: -25px;
+}
+
+.page-title::after {
+	bottom: 8px;
+    right: -25px;
 }
 
 .slide-area.bg-overlay {
@@ -220,6 +254,18 @@ table {
 	left: 0;
 	top: 0;
 	background: rgba(0, 72, 180, 0.4);
+}
+
+.bg-overlay {
+	background-size: auto 100%;
+	background-repeat: no-repeat;
+}
+
+@media (min-width: 1200px) {
+	.bg-overlay {
+		background-size: 100% auto;
+		background-repeat: no-repeat;
+	}
 }
 
 .app-breadcrumb {
@@ -873,7 +919,6 @@ table {
 	background-repeat: no-repeat;
 	font: normal normal 14px/17px var(--primary-font-family);
 	color: #fff;
-	margin-top: 55px;
 }
 
 .footer .row {
@@ -1213,16 +1258,6 @@ table {
 	z-index: 1;
 }
 
-.video-about a div::before {
-	width: 100%;
-	height: 100%;
-	content: "";
-	position: absolute;
-	top: 0;
-	left: 0;
-	background-color: rgba(52, 52, 52, 0.3);
-}
-
 .video-about a div::after {
 	content: "";
     position: absolute;
@@ -1235,6 +1270,7 @@ table {
 
 .video-about a div>img {
 	z-index: 1;
+	max-width: 100%;
 }
 
 .video-about a div span::before {
@@ -1349,4 +1385,242 @@ table {
 .section-info-page {
 	margin-bottom: 250px;
 }
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+	.section-info-page {
+		margin-bottom: 200px;
+	}
+	.video-about a div>img {
+		max-width: 90%;
+	}
+
+	.video-about a div span::before {
+		width: 90%;
+		height: 99%;
+	}
+
+	.video-about a::before {
+		right: 0;
+	}
+
+	.video-about a div span::after {
+		top: -41px;
+		right: -18px;
+	}
+
+	.sip-item .sip-item-contents {
+		height: 140px;
+	}
+
+	.sip-item {
+		margin-bottom: -65%;
+		margin-top: 35%;
+	}
+}
+
+@media (max-width: 991.98px) {
+	.introduced {
+		overflow: hidden;
+	}
+
+	.video-about {
+		justify-content: center;
+	}
+
+	.section-info-page {
+		margin-bottom: 0;
+	}
+
+	.sip-item {
+		margin-bottom: 1rem;
+    	margin-top: 2rem
+	}
+
+	.partner {
+		margin-top: 45px;
+	}
+
+	.sip-item .sip-item-contents {
+		height: unset;
+	}
+}
 /* end trang gioi thieu */
+
+/* trang danh muc san pham */
+.product-catalog-section {
+	padding-bottom: 60px;
+}
+
+.product-catalog-section .ps-item {
+	display: inline-block;
+	width: 100%;
+	height: 275px;
+	overflow: hidden;
+	background-color: #fff;
+	text-decoration: none;
+	margin-bottom: 20px;
+}
+
+.product-catalog-section .ps-item .img-container {
+	height: calc(100% - 50px);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.product-catalog-section .ps-item .img-container img {
+	object-fit: cover;
+	object-position: 50% 50%;
+	transition: .6s;
+}
+
+.product-catalog-section .ps-item:hover .img-container img {
+	transform: scale(1.1);
+}
+
+.product-catalog-section .ps-item .d-flex {
+	justify-content: space-between;
+	align-items: center;
+	padding: 8px 1rem;
+	height: 50px;
+	position: relative;
+}
+
+.product-catalog-section .ps-item .d-flex::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: transparent;
+	z-index: 0;
+	transition: .6s;
+}
+
+.product-catalog-section .ps-item:hover .d-flex::before {
+	background-color: var(--primary-color);
+}
+
+.product-catalog-section .ps-item .d-flex h6 {
+	font: normal 400 21px/25px Roboto;
+	letter-spacing: 0em;
+	text-align: left;
+	color: var(--primary-text-color);
+	margin-right: 10px;
+	z-index: 1;
+	display: -webkit-box;
+	-webkit-line-clamp: 1;
+	-webkit-box-orient: vertical;  
+	overflow: hidden;
+}
+
+.product-catalog-section .ps-item .d-flex i {
+	text-align: left;
+	font-size: 16px;
+	color: #B5B5B5;
+	z-index: 1;
+} 
+
+.product-catalog-section .ps-item:hover .d-flex h6,
+.product-catalog-section .ps-item:hover .d-flex i {
+	color: #fff
+}
+/* end trang danh muc san pham */
+
+/* trang san pham */
+.product-section {
+	padding-bottom: 60px;
+}
+
+.product-section .ps-item {
+	display: inline-block;
+	border: 1px solid #F0F0F0;
+	box-sizing: border-box;
+	width: 100%;
+	height: 285px;
+	overflow: hidden;
+	background-color: #fff;
+	text-decoration: none;
+	margin-bottom: 20px;
+}
+
+.product-section .ps-item .img-container {
+	height: calc(100% - 100px);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.product-section .ps-item .img-container img {
+	object-fit: cover;
+	object-position: 50% 50%;
+	transition: .6s;
+}
+
+.product-section .ps-item:hover .img-container img {
+	transform: scale(1.1);
+}
+
+.product-section .ps-item .ps-body {
+	padding: 8px 1rem;
+	height: 100px;
+	position: relative;
+}
+
+.product-section .ps-item .ps-body h6 {
+	font: normal normal 21px/25px Roboto;
+	color: var(--primary-text-color);
+	text-align: center;
+	margin-bottom: 8px;
+	z-index: 1;
+	display: -webkit-box;
+	-webkit-line-clamp: 1;
+	-webkit-box-orient: vertical;  
+	overflow: hidden;
+}
+
+.product-section .ps-item .ps-body p {
+	font: normal normal 16px/21px Roboto;
+	text-align: center;
+	color: #5C5C5C;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;  
+	overflow: hidden;
+}
+
+.app-pagination .pagination .page-item{
+	margin: 0 8px;
+}
+
+.app-pagination .pagination .page-item.active .page-link {
+	background-color: var(--primary-color);
+	color: #fff;
+}
+
+.app-pagination .pagination .page-item .page-link a {
+	font: normal normal 16px/19px Roboto;
+	color: var(--primary-color);
+}
+
+.app-pagination .pagination .page-item .page-link {
+	width: 36px;
+	height: 36px;
+	border: unset;
+	text-align: center;
+	border-radius: 5000px;
+	color: var(--primary-color);
+	font: normal normal 16px/19px Roboto;
+}
+
+.app-pagination .pagination .page-item.disabled {
+	display: none;
+}
+
+.app-pagination .pagination .page-item:first-child .page-link,
+.app-pagination .pagination .page-item:last-child .page-link {
+	border: 1px solid #CACACA;
+	box-sizing: border-box;
+}
+/* end trang san pham */
