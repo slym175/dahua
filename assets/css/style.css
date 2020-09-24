@@ -873,6 +873,7 @@ table {
 	background-repeat: no-repeat;
 	font: normal normal 14px/17px var(--primary-font-family);
 	color: #fff;
+	margin-top: 55px;
 }
 
 .footer .row {
@@ -1279,11 +1280,73 @@ table {
 	height: auto;
 }
 
-.section-info-page .container {
-    margin-top: -25%;
-}
-
 .bg-img img {
 	width: 100%;
+}
+
+.sip-item {
+	padding: 1.5rem;
+    background-color: #fff;
+	box-shadow: 5px 6px 14px rgba(0, 0, 0, 0.12);
+	margin-bottom: -50%;
+    margin-top: 40%;
+}
+
+.sip-item:hover {
+	background-color: var(--secondary-color);
+}
+
+.sip-item .img-container {
+	margin-bottom: 35px;
+	min-height: 145px;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.sip-item:hover .img-container img {
+	-webkit-filter: invert(30%) brightness(3.5);
+    filter: invert(30%) brightness(3.5);
+}
+
+.sip-item .sip-item-title {
+    font: normal 700 30px/35px Roboto;
+    letter-spacing: 0em;
+    text-align: justify;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.sip-item .sip-item-title::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -26px;
+    height: 100%;
+    width: 0;
+    border-left: 5px solid var(--secondary-color);
+}
+
+.sip-item:hover .sip-item-title {
+	color: #fff;
+}
+
+.sip-item:hover .sip-item-title::before {
+	border-left: 5px solid #fff;
+}
+
+.sip-item .sip-item-contents {
+    font: normal 400 16px/24px Roboto;
+	letter-spacing: 0em;
+	height: 120px;
+    text-align: justify;
+}
+
+.sip-item:hover .sip-item-contents {
+	color: #fff;
+}
+
+.section-info-page {
+	margin-bottom: 250px;
 }
 /* end trang gioi thieu */
