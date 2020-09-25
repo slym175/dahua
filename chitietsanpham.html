@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="./assets/css/all.min.css">
     <link rel="stylesheet" href="./assets/select2/select2.min.css">
     <link rel="stylesheet" href="./assets/magiczoomplus/magiczoomplus.css">
+    <link rel="stylesheet" href="./assets/magicscroll/magicscroll.css">
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
@@ -40,25 +41,29 @@
                                         <a class="nav-link" href="danhmucsanpham.html">Sản phẩm</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="#">Hỗ trợ</a>
+                                        <a class="nav-link" href="hotro.html">Hỗ trợ</a>
+                                        <div class="submenu">
+                                            <ul>
+                                                <li><a href="video.html">Video</a></li>
+                                                <li><a href="taive.html">Tải về</a></li>
+                                            </ul>
+                                        </div>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="#">Giải pháp</a>
+                                        <a class="nav-link" href="giaiphap.html">Giải pháp</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="#">Tin tức</a>
+                                        <a class="nav-link" href="tintuc.html">Tin tức</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="#">Liên hệ</a>
+                                        <a class="nav-link" href="lienhe.html">Liên hệ</a>
                                     </li>
                                     <li class="nav-item">
                                         <a href="#" class="nav-link icons-search btn-search"></a>
-                                        <form action="#" method="POST" enctype="multipart/form-data"
-                                            class="search-form d-none">
+                                        <form action="#" method="POST" enctype="multipart/form-data" class="search-form d-none">
                                             <div>
                                                 <input type="text" placeholder="Tìm kiếm từ hahua.vn...">
-                                                <a href="#" type="submit"><i class="fa fa-search"
-                                                        aria-hidden="true"></i></a>
+                                                <a href="#" type="submit"><i class="fa fa-search" aria-hidden="true"></i></a>
                                             </div>
                                         </form>
                                     </li>
@@ -96,15 +101,48 @@
                 </div>
             </div>
         </section>
-        <section class="product-details-section">
+        <section class="product-detail-section">
             <div class="container">
                 <div class="row">
-                    <div class="col-6">
-                        <a class="MagicZoomPlus" id="image-thumbnail" href="./assets/img/p1.png">
-                            <img src="./assets/img/p1.png" alt="Image"/>
-                        </a>
+                    <div class="col-md-6 col-12">
+                        <div class="img-detail-product">
+                            <div class="app-figure" id="zoom-fig">
+                                <div class="big-img">
+                                    <a id="Zoom-1" class="MagicZoom"
+                                        data-options="hint:off; selectorTrigger: click; transitionEffect: false;zoomDistance: 20;zoomWidth:520px; zoomHeight:500px;variableZoom: true"
+                                        title="Show your product in stunning detail with Magic Zoom Plus."
+                                        href="./assets/img/p1.png">
+                                        <img src="./assets/img/p1.png" alt="Product" />
+                                    </a>
+                                </div>
+                                <div class="thumb-img">
+                                    <div id="owl-detail" class="selectors owl-carousel owl-theme">
+                                        <a data-zoom-id="Zoom-1" href="./assets/img/p1.png"
+                                            data-image="./assets/img/p1.png">
+                                            <img src="./assets/img/p1.png" />
+                                        </a>
+                                        <a data-zoom-id="Zoom-1" href="./assets/img/p2.png"
+                                            data-image="./assets/img/p2.png">
+                                            <img src="./assets/img/p2.png" />
+                                        </a>
+                                        <a data-zoom-id="Zoom-1" href="./assets/img/p3.png"
+                                            data-image="./assets/img/p3.png">
+                                            <img src="./assets/img/p3.png" />
+                                        </a>
+                                        <a data-zoom-id="Zoom-1" href="./assets/img/p4.png"
+                                            data-image="./assets/img/p4.png">
+                                            <img src="./assets/img/p4.png" />
+                                        </a>
+                                        <a data-zoom-id="Zoom-1" href="./assets/img/p5.png"
+                                            data-image="./assets/img/p5.png">
+                                            <img src="./assets/img/p5.png" />
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-6">
+                    <div class="col-md-6 col-12">
                         <h3 class="product-name">DH-HAC-HFW1200TLP-A-S4</h3>
                         <div class="product-excerpt">
                             <h6>2MP HDCVI IR Bullet Camera</h6>
@@ -140,6 +178,286 @@
                                 <img src="./assets/img/i107.png" alt="Feature">
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="product-details-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" id="pills-details-tab" data-toggle="pill"
+                                    href="#pills-details" role="tab" aria-controls="pills-details"
+                                    aria-selected="true">Chi tiết sản phẩm</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="pills-accessories-tab" data-toggle="pill"
+                                    href="#pills-accessories" role="tab" aria-controls="pills-accessories"
+                                    aria-selected="false">Phụ kiện</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="pills-tabContent">
+                            <div class="tab-pane fade show active" id="pills-details" role="tabpanel"
+                                aria-labelledby="pills-details-tab">
+                                <div class="row">
+                                    <div class="col-md-9 col-12">
+                                        <div class="details-table">
+                                            <table class="table">
+                                                <thead class="thead-light">
+                                                    <tr>
+                                                        <th scope="col" colspan="2">Camera</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td scope="row">Image Sensor</td>
+                                                        <td>1/2.7″ CMOS</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td scope="row">Effective Pixels</td>
+                                                        <td>1920(H)×1080(V), 2MP</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td scope="row">Scanning System</td>
+                                                        <td>Progressive</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Electronic Shutter Speed</td>
+                                                        <td>
+                                                            <p>PAL: 1/25~1/100000s</p>
+                                                            <p>NTSC: 1/30~1/100000s</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Minimum Illumination</td>
+                                                        <td>0.02Lux/F1.85, 30IRE, 0Lux IR on</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>S/N Ratio</td>
+                                                        <td>More than 65dB</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>IR Distance</td>
+                                                        <td>Up to 80m (262feet)</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>IR On/Off Control</td>
+                                                        <td>Auto / Manual</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>IR LEDs</td>
+                                                        <td>2</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="details-table">
+                                            <table class="table">
+                                                <thead class="thead-light">
+                                                    <tr>
+                                                        <th scope="col" colspan="2">Camera</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td scope="row">Image Sensor</td>
+                                                        <td>1/2.7″ CMOS</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td scope="row">Effective Pixels</td>
+                                                        <td>1920(H)×1080(V), 2MP</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td scope="row">Scanning System</td>
+                                                        <td>Progressive</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Electronic Shutter Speed</td>
+                                                        <td>
+                                                            <p>PAL: 1/25~1/100000s</p>
+                                                            <p>NTSC: 1/30~1/100000s</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Minimum Illumination</td>
+                                                        <td>0.02Lux/F1.85, 30IRE, 0Lux IR on</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>S/N Ratio</td>
+                                                        <td>More than 65dB</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>IR Distance</td>
+                                                        <td>Up to 80m (262feet)</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>IR On/Off Control</td>
+                                                        <td>Auto / Manual</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>IR LEDs</td>
+                                                        <td>2</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="details-table">
+                                            <table class="table">
+                                                <thead class="thead-light">
+                                                    <tr>
+                                                        <th scope="col" colspan="2">Camera</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td scope="row">Image Sensor</td>
+                                                        <td>1/2.7″ CMOS</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td scope="row">Effective Pixels</td>
+                                                        <td>1920(H)×1080(V), 2MP</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td scope="row">Scanning System</td>
+                                                        <td>Progressive</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Electronic Shutter Speed</td>
+                                                        <td>
+                                                            <p>PAL: 1/25~1/100000s</p>
+                                                            <p>NTSC: 1/30~1/100000s</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Minimum Illumination</td>
+                                                        <td>0.02Lux/F1.85, 30IRE, 0Lux IR on</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>S/N Ratio</td>
+                                                        <td>More than 65dB</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>IR Distance</td>
+                                                        <td>Up to 80m (262feet)</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>IR On/Off Control</td>
+                                                        <td>Auto / Manual</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>IR LEDs</td>
+                                                        <td>2</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div class="col-3 d-md-block d-none">
+                                        <div class="banner-container">
+                                            <img src="./assets/img/bn1.png" alt="Banner">
+                                        </div>
+                                        <div class="banner-container">
+                                            <img src="./assets/img/bn2.png" alt="Banner">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="pills-accessories" role="tabpanel"
+                                aria-labelledby="pills-accessories-tab">
+                                <div class="row product-section">
+                                    <div class="col-lg-4 col-md-6 col-12">
+                                        <a href="chitietsanpham.html" title="product" class="ps-item product">
+                                            <div class="img-container">
+                                                <img src="./assets/img/p1.png" alt="product">
+                                            </div>
+                                            <div class="ps-body">
+                                                <h6>DH-HAC-HFW1400SP</h6>
+                                                <p>6 × 4MP đa cảm biến toàn cảnh + Camera mạng PTZ WizMind</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-4 col-md-6 col-12">
+                                        <a href="chitietsanpham.html" title="product" class="ps-item product">
+                                            <div class="img-container">
+                                                <img src="./assets/img/p1.png" alt="product">
+                                            </div>
+                                            <div class="ps-body">
+                                                <h6>DH-HAC-HFW1400SP</h6>
+                                                <p>6 × 4MP đa cảm biến toàn cảnh + Camera mạng PTZ WizMind</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-4 col-md-6 col-12">
+                                        <a href="chitietsanpham.html" title="product" class="ps-item product">
+                                            <div class="img-container">
+                                                <img src="./assets/img/p1.png" alt="product">
+                                            </div>
+                                            <div class="ps-body">
+                                                <h6>DH-HAC-HFW1400SP</h6>
+                                                <p>6 × 4MP đa cảm biến toàn cảnh + Camera mạng PTZ WizMind</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-4 col-md-6 col-12">
+                                        <a href="chitietsanpham.html" title="product" class="ps-item product">
+                                            <div class="img-container">
+                                                <img src="./assets/img/p1.png" alt="product">
+                                            </div>
+                                            <div class="ps-body">
+                                                <h6>DH-HAC-HFW1400SP</h6>
+                                                <p>6 × 4MP đa cảm biến toàn cảnh + Camera mạng PTZ WizMind</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="related-product">
+            <div class="container">
+                <div class="row section-header">
+                    <div class="col-12">
+                        <h3 class="section-title">Sản phẩm liên quan</h3>
+                    </div>
+                </div>
+                <div class="row product-section">
+                    <div class="col-lg-4 col-md-6 col-12">
+                        <a href="chitietsanpham.html" title="product" class="ps-item product">
+                            <div class="img-container">
+                                <img src="./assets/img/p1.png" alt="product">
+                            </div>
+                            <div class="ps-body">
+                                <h6>DH-HAC-HFW1400SP</h6>
+                                <p>6 × 4MP đa cảm biến toàn cảnh + Camera mạng PTZ WizMind</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-12">
+                        <a href="chitietsanpham.html" title="product" class="ps-item product">
+                            <div class="img-container">
+                                <img src="./assets/img/p1.png" alt="product">
+                            </div>
+                            <div class="ps-body">
+                                <h6>DH-HAC-HFW1400SP</h6>
+                                <p>6 × 4MP đa cảm biến toàn cảnh + Camera mạng PTZ WizMind</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-12">
+                        <a href="chitietsanpham.html" title="product" class="ps-item product">
+                            <div class="img-container">
+                                <img src="./assets/img/p1.png" alt="product">
+                            </div>
+                            <div class="ps-body">
+                                <h6>DH-HAC-HFW1400SP</h6>
+                                <p>6 × 4MP đa cảm biến toàn cảnh + Camera mạng PTZ WizMind</p>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -211,6 +529,7 @@
     <script src="./assets/OwlCarousel/owl.carousel.min.js"></script>
     <script src="./assets/select2/select2.min.js"></script>
     <script src="./assets/magiczoomplus/magiczoomplus.js"></script>
+    <script src="./assets/magicscroll/magicscroll.js"></script>
     <script src="./assets/js/main.js"></script>
 </body>
 
