@@ -154,6 +154,8 @@ a,
 a:hover,
 a:focus {
 	text-decoration: none;
+	box-shadow: unset;
+	outline: none;
 }
 
 table {
@@ -579,6 +581,77 @@ header {
 	.app-nav .navbar-nav .nav-link.icons-search.btn-search {
 		margin-left: 0;
 	}
+}
+
+@media (min-width: 992px) {
+	.nav-item:hover > .submenu {
+		height: 100%;
+		visibility: visible;
+		opacity: 1;
+		top: 30px;
+	}
+	
+	.submenu {
+		display: block;
+		position: absolute;
+		height: 0;
+		visibility: hidden;
+		opacity: 0;
+		top: 20px;
+		left: 0;
+		padding-top: 1rem;
+		width: 200px;
+		transition: .4s;
+	}
+	
+	.submenu ul {
+		background-color: #fff;
+		padding: .5rem;
+		border-radius: 3px;
+		position: relative;
+	}
+	
+	.submenu ul::before {
+		content: "";
+		position: absolute;
+		top: -6px;
+		left: 2rem;
+		height: 0;
+		width: 0;
+		border-left: 5px solid transparent;
+		border-right: 5px solid transparent;
+		border-bottom: 6px solid #fff;
+	}
+}
+
+@media (max-width: 991.98px) {
+	.submenu {
+		display: block;
+		position: relative;
+		height: 100%;
+		top: unset;
+		left: unset;
+		visibility: visible;
+		opacity: 1;
+		padding-top: unset;
+		width: 100%;
+		transition: .4s;
+	}
+
+	.submenu ul {
+		padding: 0 1rem;
+		width: 100%;
+	}
+}
+
+.submenu ul li:not(:last-child) {
+	margin-bottom: 8px;
+}
+
+.submenu ul li a {
+	font: normal normal 15px/18px var(--primary-font-family);
+	color: var(--primary-text-color);
+	text-transform: uppercase;
 }
 
 /* trang chu */
@@ -1060,7 +1133,6 @@ header {
 .partner-carousel .owl-dots .owl-dot.active {
 	background-color: #0A4A86;
 }
-
 /* end trang chu */
 
 /* footer */
