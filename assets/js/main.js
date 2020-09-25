@@ -11,6 +11,17 @@ $(function () {
         activeOverlay: false, // Set CSS color to display scrollUp active point, e.g '#00FFFF'
     });
 
+    $(".fancybox")
+    .attr('rel', 'gallery')
+    .fancybox({
+        openEffect  : 'none',
+        closeEffect : 'none',
+        nextEffect  : 'none',
+        prevEffect  : 'none',
+        padding     : 0,
+        margin      : [20, 60, 20, 60] // Increase left/right margin
+    });
+
     $('.home-carousel').owlCarousel({
         loop: true,
         margin: 10,
