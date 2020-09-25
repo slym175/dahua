@@ -441,6 +441,11 @@ table {
 }
 
 /* header */
+.navbar-collapse {
+	background-color: #fff;
+	z-index: 10;
+}
+
 header {
 	z-index: 100;
 }
@@ -458,6 +463,8 @@ header {
 .app-nav {
 	padding-top: 10px;
 	padding-bottom: 10px;
+	padding-left: 0;
+	padding-right: 0;
 }
 
 .app-nav .navbar-brand {
@@ -556,7 +563,23 @@ header {
 	color: #fff;
 }
 
+@media (max-width: 991.98px) {
+	.navbar-collapse {
+		padding: 1rem;
+	}
 
+	.app-nav .navbar-nav {
+		align-items: flex-start;
+	}
+
+	.app-nav .navbar-nav .nav-link {
+		padding-left: 0;
+	}
+
+	.app-nav .navbar-nav .nav-link.icons-search.btn-search {
+		margin-left: 0;
+	}
+}
 
 /* trang chu */
 .solutions-carousel,
