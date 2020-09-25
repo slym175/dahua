@@ -54,14 +54,3 @@ $('.box-preview').slick({
 	},
 	]
 });
-/* hover download */
-$(".download-item li").mouseover(function(){
-	$(this).find(".btn-taixuong").html('Tải xuống<img src="./assets/img/t12.png" alt="" class="hover">');
-	$(this).find(".date .img").html('<img src="./assets/img/t10.png" alt="">');
-	$(this).find(".admin .img").html('<img src="./assets/img/t11.png" alt="">');
-});
-$(".download-item li").mouseout(function(){
-	$(this).find(".btn-taixuong").html('Tải xuống<img src="./assets/img/t13.png" alt="" class="hover">');
-	$(this).find(".date .img").html('<img src="./assets/img/t14.png" alt="">');
-	$(this).find(".admin .img").html('<img src="./assets/img/t15.png" alt="">');
-});

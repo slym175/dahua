@@ -2735,3 +2735,34 @@ a[data-zoom-id] img,
 	}
 }
 /* end trang lien he */
+
+.download-element .section-download {
+	padding-bottom: 0;
+}
+
+.box-preview .general-news.video-type {
+	padding: 10px;
+}
+
+.box-preview .general-news.video-type .img-container {
+	overflow: hidden;
+	margin-bottom: 0;
+}
+
+.box-preview .general-news.video-type .img-container img{
+	width: 100%;
+}
+
+.box-preview .general-news h4.news-title {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	padding: 10px 1rem;
+	margin: 1rem;
+	color: #fff;
+}
+
+.box-preview .general-news.video-type .img-container::after,
+.box-preview .general-news.video-type:hover .img-container::after {
+	background: rgba(52, 52, 52, 0.3);
+}
