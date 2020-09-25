@@ -253,8 +253,8 @@ table {
 	display: inline-block;
 	border-radius: 50%;
 	position: fixed;
-	right: 31px;
-	bottom: 150px;
+	right: 28px;
+    bottom: 100px;
 	z-index: 1000;
 	animation: 1s messenger infinite;
 }
@@ -1696,11 +1696,20 @@ header {
 	}
 
 	.partner {
-		margin-top: 45px;
+		margin-top: 0;
 	}
 
 	.sip-item .sip-item-contents {
 		height: unset;
+	}
+
+	.hotline::before {
+		bottom: 0;
+	}
+
+	.section-header {
+		padding-top: 35px;
+    	padding-bottom: 15px;
 	}
 }
 
