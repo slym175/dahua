@@ -70,4 +70,28 @@ $(function () {
         e.preventDefault();
         $('.search-form').toggleClass('d-none');
     })
+
+    $('#owl-detail').owlCarousel({
+        loop: false,
+        margin: 10,
+        nav: true,
+        dots: false,
+        responsive: {
+            0: {
+                items: 1
+            },
+            576: {
+                items: 2
+            },
+            992: {
+                items: 3
+            }
+        }
+    })
+
+    $('#owl-detail .owl-item').click(function(e){
+        e.preventDefault();
+        $('#owl-detail .owl-item').removeClass('selected');
+        $(this).addClass('selected');
+    })
 });
