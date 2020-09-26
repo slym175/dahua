@@ -420,4 +420,12 @@
 	.btn-tr-seeall{
 		margin-top: 0;
 	}
+	.section-not-found{
+		overflow: hidden;
+		height: 260px;
+	}
+	.section-not-found img{
+		object-fit: cover;
+		height: 260px;
+	}
 }
