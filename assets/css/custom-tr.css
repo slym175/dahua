@@ -347,7 +347,7 @@
   position: absolute;
   top: 50%;
   left: 0;
-  transform: translate(0, -50%);
+  transform: translate(0, calc(-50% - 28px));
 }
 .slider_video .owl-prev img {
   background: #2B2B2B;
@@ -360,7 +360,7 @@
   position: absolute;
   top: 50%;
   right: 0;
-  transform: translate(0, -50%);
+  transform: translate(0, calc(-50% - 28px));
 }
 .slider_video .owl-next img {
   background: #2B2B2B;
