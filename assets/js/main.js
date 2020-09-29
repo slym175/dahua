@@ -56,7 +56,7 @@ $(function () {
 
     $('.partner-carousel').owlCarousel({
         loop: true,
-        margin: 27,
+        margin: 20,
         nav: true,
         dots: true,
         responsive: {
@@ -67,7 +67,7 @@ $(function () {
                 items: 2
             },
             992: {
-                items: 4
+                items: 5
             }
         }
     })
@@ -87,6 +87,9 @@ $(function () {
         margin: 10,
         nav: true,
         dots: false,
+        onInitialized: function() {
+            $('#owl-detail .owl-item:first-child').addClass('selected');
+        },
         responsive: {
             0: {
                 items: 1
