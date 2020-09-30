@@ -28,7 +28,7 @@ $(function () {
         items: 1,
         autoHeight: true,
         nav: true,
-        dots: false,
+        dots: true,
         responsive: {
 
         }
