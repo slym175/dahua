@@ -29,6 +29,7 @@ $(function () {
         autoHeight: true,
         nav: true,
         dots: true,
+        autoplay: true,
         responsive: {
 
         }
@@ -116,99 +117,40 @@ $(function () {
         dots: false,
     })
 
-    $('select.juridical-form-control#orderby').select2({
-        minimumResultsForSearch: Infinity,
-        placeholder: "Sắp xếp theo",
-        data: [
-            {
-                id: 0,
-                text: 'Giá tăng dần'
+    $('.menu-carousel').owlCarousel({
+        loop:false,
+        nav:true,
+        items: 6,
+        dots: false,
+        onChanged: menuOnchange,
+        navText: ["<i class='fa fa-angle-double-left' aria-hidden='true'></i>","<i class='fa fa-angle-double-right' aria-hidden='true'></i>"],
+        responsive: {
+            0: {
+                items: 1
             },
-            {
-                id: 1,
-                text: 'Giá giảm dần'
+            576: {
+                items: 2
             },
-            {
-                id: 2,
-                text: 'Ngày phát hành'
+            992: {
+                items: 4
             },
-            {
-                id: 3,
-                text: 'Bán chạy'
-            },
-        ]
-    });
-
-    $('select.juridical-form-control#catalog').select2({
-        minimumResultsForSearch: Infinity,
-        placeholder: "Danh mục sản phẩm",
-        data: [
-            {
-                id: 0,
-                text: 'Danh mục A'
-            },
-            {
-                id: 1,
-                text: 'Danh mục B'
-            },
-            {
-                id: 2,
-                text: 'Danh mục C'
-            },
-            {
-                id: 3,
-                text: 'Danh mục D'
-            },
-            {
-                id: 4,
-                text: 'Danh mục E'
+            1200: {
+                iitems: 6,
             }
-        ]
-    });
+        }
+    })
 
-    $('select.juridical-form-control#category').select2({
-        minimumResultsForSearch: Infinity,
-        placeholder: "Dòng sản phẩm",
-        data: [
-            {
-                id: 0,
-                text: 'Dòng A'
-            },
-            {
-                id: 1,
-                text: 'Dòng A1'
-            },
-            {
-                id: 2,
-                text: 'Dòng A2'
-            },
-        ]
-    });
+    function menuOnchange(el) {
+        $(el.target)
+        .find('.owl-item').removeClass('last')
+        .eq(el.item.index + el.page.size - 1).addClass('last');
+    }
 
-    $('select.juridical-form-control#price').select2({
-        minimumResultsForSearch: Infinity,
-        placeholder: "Khoảng giá",
-        data: [
-            {
-                id: 0,
-                text: 'Dưới 1$'
-            },
-            {
-                id: 1,
-                text: 'Từ 1$ đến 5$'
-            },
-            {
-                id: 2,
-                text: 'Từ 5$ đến 10$'
-            },
-            {
-                id: 3,
-                text: 'Từ 10$ đến 50$'
-            },
-            {
-                id: 4,
-                text: 'Trên 50$'
-            }
-        ]
-    });
+    $('select.juridical-form-control#orderby').niceSelect();
+
+    $('select.juridical-form-control#catalog').niceSelect();
+
+    $('select.juridical-form-control#category').niceSelect();
+
+    $('select.juridical-form-control#price').niceSelect();
 });
